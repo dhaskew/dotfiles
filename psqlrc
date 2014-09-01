@@ -1,0 +1,24 @@
+-- set the prompt to something (I should probably change this ..)
+-- \set PROMPT1 '%[%033[33;1m%]%x%[%033[0m%]%[%033[1m%]%/%[%033[0m%]%R%# '
+-- username@[host]:port [database_name]
+\set PROMPT1 '(%n@%M:%>) [%/] > '
+\set PROMPT2 ''
+
+-- actually say NULL for NULL fields
+\pset null 'NULL'
+
+-- naming of history files
+\set HISTFILE ~/.psql_history- :HOST - :DBNAME
+
+-- size of command history
+\set HISTSIZE 2000
+
+-- show timing for quiries executed
+\timing
+
+-- set character encoding
+\encoding unicode
+
+-- auto toggle expanded display 
+-- useful when you only return 1 result from a table with many columns
+\x auto
