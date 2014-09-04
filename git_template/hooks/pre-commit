@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+# Checks staged files for disallowed additions
+
+class PreCommitHandler
+
+  def handle
+    # TODO: scope disallowed patterns based on file name (*_spec.rb, *.rb, .etc)
+    %w{ :focus binding.pry }.each do |forbidden|
+      cmd  = "git diff --cached -G'#{forbidden}'"
+      diff = `#{cmd}`
+      unless diff.empty?
+        puts "REJECTING COMMIT ==== #{forbidden} ===="
+        puts diff
+        exit 1
+      end
+    end
+  end
+
+end
+
+PreCommitHandler.new.handle
+
