@@ -36,5 +36,7 @@ filetype plugin indent on       "load file type plugins + indentation
 "start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 vmap <Enter> <Plug>(EasyAlign)
 
+"make sure .md files are treated as markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 
