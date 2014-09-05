@@ -39,4 +39,5 @@ vmap <Enter> <Plug>(EasyAlign)
 "make sure .md files are treated as markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
-
+"enable vim-airline status bar by default
+set laststatus=2
