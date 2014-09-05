@@ -41,3 +41,6 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 "enable vim-airline status bar by default
 set laststatus=2
+
+"vim-airline
+"let g:airline_powerline_fonts = 1
