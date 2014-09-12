@@ -44,3 +44,12 @@ set laststatus=2
 
 "vim-airline
 "let g:airline_powerline_fonts = 1
+
+"enable tabline from airline
+let g:airline#extensions#tabline#enabled = 1
+
+" Remap buffer Ex commands
+nnoremap <silent> [b :bprevious
+nnoremap <silent> ]b :bnext
+nnoremap <silent> [B :bfirst
+nnoremap <silent> ]B :blast
