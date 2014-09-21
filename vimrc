@@ -49,7 +49,7 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 
 " Remap buffer Ex commands
-nnoremap <silent> [b :bprevious
-nnoremap <silent> ]b :bnext
-nnoremap <silent> [B :bfirst
-nnoremap <silent> ]B :blast
+nnoremap <silent> [b :bprevious<cr>
+nnoremap <silent> ]b :bnext<cr>
+nnoremap <silent> [B :bfirst<cr>
+nnoremap <silent> ]B :blast<cr>
