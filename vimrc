@@ -61,3 +61,9 @@ endif
 
 " leader v key opens vimrc
 nmap <leader>v :tabedit $MYVIMRC<CR>
+
+" turn off the arrow keys to force using the home row (hjkl)
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
