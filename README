@@ -1,0 +1,7 @@
+This is a collection of my dotfiles.  If you would like to use them, then:
+
+git clone <repository>
+cd <clone>
+chmod +x ./link.sh (if necessary)
+./link.sh
+retart terminal to pickup some changes ( some will work instantly, though)
