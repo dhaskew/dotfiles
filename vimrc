@@ -23,6 +23,7 @@ set smartcase
 
 
 let mapleader = ","             " remap the leader key from "\" to ","
+noremap \ ,
 
 " toggle relativenumber with ,n or <leader>n
 nnoremap <silent><leader>n :set rnu! rnu? <cr>
@@ -63,7 +64,7 @@ endif
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
 " turn off the arrow keys to force using the home row (hjkl)
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
+noremap <Up>    <Nop>
+noremap <Down>  <Nop>
+noremap <Left>  <Nop>
 noremap <Right> <Nop>
