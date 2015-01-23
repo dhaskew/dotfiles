@@ -36,9 +36,11 @@ function lastc() {
   CUR_DIR=$(basename "$PWD")
 
   if test $status -ne 0 ; then
-    export PS1="\[${BLDRED}\]  \[\342\203\240\] \[${LIGHT}\]: \[${ORANGE}\]\u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
+    #export PS1="\[${BLDRED}\]\[\342\203\240\] \[${LIGHT}\]: \[${ORANGE}\]\u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
+    export PS1="\[${ORANGE}\]\u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
   else
-    export PS1="\[${BLDGRN}\] \[\342\234\223\] \[${LIGHT}\]: \[${ORANGE}\]\u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
+   # export PS1="\[${BLDGRN}\]\[\342\234\223\] \[${LIGHT}\]: \[${ORANGE}\]\u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
+   export PS1="\[${ORANGE}\]\u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
   fi
   
 }
@@ -55,3 +57,5 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # set the EDITOR var so that we use VIM where possible
 export EDITOR="vim"
+
+set -o vi
