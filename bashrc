@@ -34,15 +34,23 @@ function lastc() {
   status=$? 
   
   CUR_DIR=$(basename "$PWD")
-
+  CUR_PC="$(hostname -s)"
   if test $status -ne 0 ; then
-    #export PS1="\[${BLDRED}\]\[\342\203\240\] \[${LIGHT}\]: \[${ORANGE}\]\u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
-    export PS1="\[${BLDRED}\]\342\203\240 \[${LIGHT}\]: \[${ORANGE}\]\u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
-    #export PS1="\[${ORANGE}\]\u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
+    if [[ $CUR_PC = "is-mbp-dhaskew" ]]
+    then 
+      export PS1="\[${BLDRED}\] \[\342\]\203\240 \[${LIGHT}\]: \[${ORANGE}\]\u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
+    else
+      export PS1="\[${BLDRED}\]\342\203\240 \[${LIGHT}\]: \[${ORANGE}\]\u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
+    fi
   else
-   # export PS1="\[${BLDGRN}\]\[\342\234\223\] \[${LIGHT}\]: \[${ORANGE}\]\u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
-    export PS1="\[${BLDGRN}\]\342\234\[\223\] \[${LIGHT}\]: \[${ORANGE}\]\u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
+    if [[ $CUR_PC = "is-mbp-dhaskew" ]]
+    then
+      export PS1="\[${BLDGRN}\]\342\[\234\223\] \[${LIGHT}\]: \[${ORANGE}\]\u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
+    else
+# export PS1="\[${BLDGRN}\]\[\342\234\223\] \[${LIGHT}\]: \[${ORANGE}\]\u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
     #export PS1="\[${ORANGE}\]\u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
+      export PS1="\[${BLDGRN}\]\342\234\[\223\] \[${LIGHT}\]: \[${ORANGE}\]\u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
+    fi
   fi
   
 }
