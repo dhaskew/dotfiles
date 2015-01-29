@@ -11,6 +11,13 @@ alias rtemp='curl https://raw.githubusercontent.com/dhaskew/templates/master/rai
 
 export CLICOLOR="YES" #get color output from ls
 
+alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
+
+if [ -f "$HOME/.bash_ps1" ]; then
+
+. "$HOME/.bash_ps1"
+
+fi
 
 # Name the colors we'll be using to make them somewhat readable
 ORANGE="\[\e[38;5;214m\]"
