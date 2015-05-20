@@ -48,8 +48,6 @@ function lastc() {
     then
       export PS1="\[${ORANGE}\]\u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
     else
-# export PS1="\[${BLDGRN}\]\[\342\234\223\] \[${LIGHT}\]: \[${ORANGE}\]\u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
-    #export PS1="\[${ORANGE}\]\u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
       export PS1="\[${BLDGRN}\]\342\234\[\223\] \[${LIGHT}\]: \t :\[${ORANGE}\] \u \[${DARK}\]@ \[${YELLOW}\]\h \[${DARK}\]in \[${CYAN}\]\[$CUR_DIR\] \[${LIGHT}\]\$ "
     fi
   fi
