@@ -1,4 +1,25 @@
 set nocompatible                " vi compatible mode off
+filetype on
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'bling/vim-airline'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+
+
+" all plugins should be loaded above
+call vundle#end()
+
+map <C-n> :NERDTreeToggle<CR>
 
 syntax enable                   "enable syntax highlighting
 "set smartindent
@@ -28,11 +49,7 @@ noremap \ ,
 " toggle relativenumber with ,n or <leader>n
 nnoremap <silent><leader>n :set rnu! rnu? <cr>
 
-                                "https://github.com/tpope/vim-pathogen
-execute pathogen#infect()       
 filetype plugin indent on       "load file type plugins + indentation
-
-
 
 "start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 vmap <Enter> <Plug>(EasyAlign)
