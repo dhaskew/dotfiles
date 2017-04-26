@@ -14,7 +14,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
-
+Plugin 'vim-ruby/vim-ruby'
 
 " all plugins should be loaded above
 call vundle#end()
@@ -22,8 +22,10 @@ call vundle#end()
 map <C-n> :NERDTreeToggle<CR>
 
 syntax enable                   "enable syntax highlighting
+
 "set smartindent
 "set autoindent
+set t_Co=256
 colors codeschool               "set sytax highlighting theme
 
 set number                      "enable line numbers
