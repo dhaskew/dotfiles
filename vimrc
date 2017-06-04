@@ -82,6 +82,14 @@ endif
 " leader v key opens vimrc
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
+" leader l key toggles command - set list
+nmap <leader>l :set list!<CR>
+
+"t invisible chars colors
+"hi NonText ctermfg=59 ctermbg=NONE cterm=NONE guifg=##a52a2a guibg=#232c31 gui=NONE
+hi NonText ctermfg=202
+hi SpecialKey ctermfg=202 
+
 " turn off the arrow keys to force using the home row (hjkl)
 noremap <Up>    <Nop>
 noremap <Down>  <Nop>
