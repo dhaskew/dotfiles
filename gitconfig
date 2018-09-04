@@ -1,0 +1,28 @@
+[user]
+	name = David Askew
+	email = daskew@ionicsecurity.com
+[core]
+	autocrlf = input
+[color]
+	ui = auto
+[diff]
+  tool = bcomp 
+[difftool]
+  prompt = false
+[difftool]
+  trustExitCode = true
+  cmd = "/usr/local/bin/bcomp" \"$LOCAL\" \"$REMOTE\"
+[merge]
+  tool = bcomp
+[mergetool]
+  prompt = false
+[mergetool "bcomp"]
+  trustExitCode = true
+  cmd = "/usr/local/bin/bcomp" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+
+ 
+[push]
+	default = simple
+[alias]
+	glog = log --color --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	glogf = log --pretty=format:'%C(red)%h%Creset - %C(yellow)%d% %Creset%s%Cblue [%cn]' --decorate --numstat

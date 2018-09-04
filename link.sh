@@ -4,4 +4,4 @@ ln -s $PWD/profile /Users/daskew/.profile
 ln -s $PWD/bash_profile /Users/daskew/.bash_profile
 ln -s $PWD/bashrc /Users/daskew/.bashrc
 ln -s $PWD/pryrc /Users/daskew/.pryrc
-
+ln -s $PWD/gitconfig /Users/daskew/.gitconfig
