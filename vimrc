@@ -72,6 +72,7 @@ noremap [p :cprevious<cr>
 noremap <leader>b :GoBuild<cr>
 noremap <leader>r :GoRun<cr>
 noremap <leader>t :GoTest<cr>
+noremap <leader>d :GoDef<cr>
 noremap <leader>tf :GoTestFunc<cr>
 noremap <leader>tc :GoCoverageToggle<cr>
 noremap <leader>bc :GoCoverageBrowser<cr>
