@@ -92,6 +92,12 @@ command! Todo call s:todo()
 noremap /t :Todo<cr>
 noremap /c :cclose<cr>
 
+
+" if you have any problems with multi-key shortcuts, there may be a timeout at
+" play. See the following links for more info
+" https://medium.com/usevim/vim-101-what-is-the-leader-key-f2f5c1fa610f
+" https://www.johnhawthorn.com/2012/09/vi-escape-delays/
+" http://www.polarhome.com/vim/manual/v57/options.html#'timeoutlen'
 noremap <leader>b :GoBuild<cr>
 noremap <leader>r :GoRun<cr>
 noremap <leader>t :GoTest<cr>
